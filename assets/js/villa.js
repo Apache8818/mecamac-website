@@ -437,7 +437,7 @@
         o.puffs.push({ m: puff, phase: pi / 3, x: acX, y: SLAB_T + WALL_H - 0.36, z: acZ + 0.2 });
       }
       // the room temperature, floating over the room — this is what makes a temperature change visible
-      o.tempLabel = labelSprite(1.5, 0.75);
+      o.tempLabel = labelSprite(1.5, 0.75); o.floor = r.floor;
       o.tempLabel.position.set(cx, SLAB_T + WALL_H + 1.55, cz); g.add(o.tempLabel); labels.push(o);
     }
     // a real door on a hinge: unlocking swings it open, locking closes it
@@ -513,10 +513,10 @@
     orbit.tAz -= dx * 0.006; orbit.tPol = Math.min(1.35, Math.max(0.45, orbit.tPol - dy * 0.005));
   });
   window.addEventListener('pointerup', function () { drag.on = false; });
-  canvas.addEventListener('wheel', function (e) { e.preventDefault(); orbit.tDist = Math.min(62, Math.max(16, orbit.tDist + e.deltaY * 0.02)); }, { passive: false });
+  canvas.addEventListener('wheel', function (e) { e.preventDefault(); userZoomed = true; orbit.tDist = Math.min(62, Math.max(16, orbit.tDist + e.deltaY * 0.02)); }, { passive: false });
   canvas.addEventListener('touchstart', function (e) { if (e.touches.length === 2) drag.pinch = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); }, { passive: true });
   canvas.addEventListener('touchmove', function (e) {
-    if (e.touches.length === 2 && drag.pinch) { var p = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); orbit.tDist = Math.min(62, Math.max(16, orbit.tDist - (p - drag.pinch) * 0.05)); drag.pinch = p; }
+    if (e.touches.length === 2 && drag.pinch) { userZoomed = true; var p = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY); orbit.tDist = Math.min(62, Math.max(16, orbit.tDist - (p - drag.pinch) * 0.05)); drag.pinch = p; }
   }, { passive: true });
   canvas.style.touchAction = 'none';
 
@@ -535,10 +535,19 @@
     }
   });
 
+  // the pinned box is squarer than the old wide stage (4:3 on desktop, ~1:1 on a
+  // phone) — back the camera off as the box gets squarer so the whole villa,
+  // including the far rooms and their labels, stays inside the frame
+  var userZoomed = false;
   function resize() {
     var w = host.clientWidth, h = host.clientHeight || Math.round(w * 0.66);
     renderer.setSize(w, h, false);
     camera.aspect = w / h; camera.updateProjectionMatrix();
+    if (!userZoomed) {
+      var base = isSmall ? 38 : 30;
+      var fit = base * Math.min(1.32, Math.max(1, 1.62 / camera.aspect));
+      orbit.tDist = fit; if (!orbit._placed) { orbit.dist = fit; orbit._placed = true; }
+    }
   }
   window.addEventListener('resize', resize); resize();
   // the pinned box changes height with the phone's address bar and on rotation,
@@ -615,6 +624,12 @@
     floorGroups[1].position.y = FLOOR_H + (1 - floorK) * 4.2;
     var op = 0.12 + 0.88 * floorK;
     for (var i = 0; i < ghostMats.length; i++) ghostMats[i].opacity = op;
+    // temperature labels follow their floor: the ghosted floor's labels fade with it, so they
+    // never sit at full strength on top of the floor you are actually controlling
+    for (var li = 0; li < labels.length; li++) {
+      var lo = labels[li];
+      if (lo.tempLabel) lo.tempLabel.material.opacity = lo.floor === 1 ? (0.08 + 0.92 * floorK) : (1 - 0.9 * floorK);
+    }
     // moving parts — slow enough to be seen
     gateX.cur = ease(gateX.cur, gateX.tgt, 0.05, dt); gate.position.x = VW / 2 + gateX.cur;
     garageY.cur = ease(garageY.cur, garageY.tgt, 0.05, dt); garage.userData.door.position.y = garageY.cur;

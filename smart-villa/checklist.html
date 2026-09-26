@@ -59,7 +59,7 @@ footer.foot{margin-top:18px;font-size:.72rem;color:var(--soft);display:flex;just
 <meta content="summary_large_image" name="twitter:card"/>
 </head>
 <body>
-<a class="skip-link" href="#sheet" data-i18n="ui.skip">Skip to content</a>
+<a class="skip-link" href="#sheet">Skip to content</a>
 <div class="tools" id="tools"></div>
 <main class="sheet" id="sheet" tabindex="-1"></main>
 <script>
@@ -67,6 +67,7 @@ footer.foot{margin-top:18px;font-size:.72rem;color:var(--soft);display:flex;just
   var q = new URLSearchParams(location.search);
   var lang = q.get('lang') === 'ar' ? 'ar' : (q.get('lang') === 'en' ? 'en' : (function () { try { return localStorage.getItem('mecamac-lang') === 'ar' ? 'ar' : 'en'; } catch (e) { return 'en'; } })());
   document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  if (lang === 'ar') { var sk = document.querySelector('.skip-link'); if (sk) sk.textContent = 'تخطَّ إلى المحتوى'; }
   var brand = ['abb', 'lifesmart'].indexOf(q.get('brand')) >= 0 ? q.get('brand') : 'abb';
   var size = Math.max(120, Math.min(3000, parseInt(q.get('size'), 10) || 450)), floors = Math.max(1, Math.min(3, parseInt(q.get('floors'), 10) || 2));
   var f = {}; (q.get('f') || 'lighting,blinds,ac,access').split(',').forEach(function (k) { f[k] = true; });

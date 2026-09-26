@@ -1,0 +1,8 @@
+# ⚠️ TESTING PHASE: keep everything blocked while on GitHub Pages.
+User-agent: *
+Disallow: /
+
+# ===== AT LAUNCH, USE THIS INSTEAD =====
+# User-agent: *
+# Allow: /
+# Sitemap: https://www.mecamac.com/sitemap.xml

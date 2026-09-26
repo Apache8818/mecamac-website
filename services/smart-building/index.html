@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<script>(function(){var d=document.documentElement;try{var t=localStorage.getItem("mecamac-theme");if(!t)t=window.matchMedia&&matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";d.setAttribute("data-theme",t);try{if(localStorage.getItem("mecamac-motion")==="off")d.setAttribute("data-motion","off");}catch(e){}var l=localStorage.getItem("mecamac-lang");if(l==="ar"){d.setAttribute("lang","ar");d.setAttribute("dir","rtl");d.classList.add("ar-pending");setTimeout(function(){d.classList.remove("ar-pending");},3000);document.write('<script src="../../assets/js/ar.js"><\/script>');}}catch(e){d.setAttribute("data-theme","light");}})();</script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#04141F" name="theme-color"/>
+<!-- ⚠️ TESTING PHASE ONLY — REMOVE the next line before launching on the official domain -->
+<meta content="noindex, nofollow" name="robots"/>
+<title data-i18n="sb.001">Smart Buildings in Oman | ABB KNX &amp; BMS Integration — Mecamac Muscat</title>
+<meta content="Smart building automation in Oman by Mecamac — ABB i-bus KNX and BMS integration for commercial, hospitality and institutional assets. Lighting control, HVAC control, metering and energy analytics. Head office Muscat." name="description"/>
+<!-- <link rel="canonical" href="https://www.mecamac.com/services/smart-building/"> -->
+<meta content="website" property="og:type"/>
+<meta content="Smart Buildings in Oman | ABB KNX &amp; BMS Integration — Mecamac Muscat" property="og:title"/>
+<meta content="Smart building automation in Oman by Mecamac — ABB i-bus KNX and BMS integration for commercial, hospitality and institutional assets. Lighting control, HVAC control, metering and energy analytics. Head office Muscat." property="og:description"/>
+<meta content="en_OM" property="og:locale"/>
+<meta content="https://www.mecamac.com/services/smart-building/" property="og:url"/>
+<meta content="https://www.mecamac.com/assets/img/og-cover.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Mecamac" property="og:site_name"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="../../assets/img/logo-navy.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../../assets/css/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Building Automation",
+  "name": "Smart Buildings in Oman",
+  "description": "Design, integration and commissioning of ABB KNX and BMS building automation for commercial, hospitality, institutional and residential assets in Oman.",
+  "areaServed": "Oman",
+  "provider": { "@type": "LocalBusiness", "name": "Mecamac", "telephone": "+96899680012", "address": { "@type": "PostalAddress", "addressLocality": "Muscat", "addressCountry": "OM" } }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which protocols do you work with, and can you integrate legacy plant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We design primarily on KNX for the field layer and BACnet/IP or Modbus at the plant and head-end layer. Legacy equipment is integrated through gateways where native protocol support is absent, and we survey existing panels before committing to an integration approach so the scope is known rather than assumed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you avoid vendor lock-in for the client?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By specifying open protocols and transferring the complete programming set at handover — topology, group addressing, device schedules and project files. The client can appoint any competent KNX or BACnet integrator afterwards. This is a deliberate commercial position: we would rather be retained on merit than by dependency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What documentation do you issue for consultants and tender submissions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compliance statements against the specification, manufacturer authorisation letters, control philosophy documents, riser and topology drawings, device schedules, and I/O point lists. Testing and commissioning records follow the agreed witnessing regime."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the system commissioned and verified?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pre-commissioning checks on containment, addressing and power, followed by point-to-point verification, then functional performance testing of each control sequence against the philosophy. Results are recorded per sequence and witnessed by the consultant where required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the system support energy and sustainability reporting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Sub-metering architecture is designed at the outset so consumption can be attributed by tenant, floor or system. Trend data is retained and exported for reporting, and the analytics layer highlights energy drift so corrective action rests on evidence rather than assumption."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="ui.skip">Skip to content</a>
+<header class="site-header">
+<nav aria-label="Main" class="nav wrap">
+<a aria-label="Mecamac home" class="logo" href="../../index.html"><img alt="Mecamac logo" src="../../assets/img/logo-cyan.png" style="height:40px;width:auto"/></a>
+<div class="nav-right"><ul class="nav-links">
+<li><a data-i18n="sb.002" href="../../index.html">Home</a></li>
+<li><a aria-current="page" data-i18n="sb.003" href="../../services/smart-building/index.html">Smart Buildings</a></li>
+<li><a data-i18n="sb.004" href="../../services/hvac/index.html">HVAC</a></li>
+<li><a data-i18n="sb.005" href="../../services/contracting/index.html">Contracting</a></li>
+<li><a data-i18n="sb.006" href="../../services/data-center/index.html">Data Centres</a></li>
+<li class="nav-extra"><a data-i18n="sb.992" href="../../smart-villa/index.html">3D Villa Simulator</a></li>
+<li><a data-i18n="sb.007" href="../../projects/index.html">Projects</a></li>
+<li><a data-i18n="sb.008" href="../../contact/index.html">Contact</a></li>
+<li><a class="nav-cta" data-i18n="sb.009" href="../../contact/index.html">Enquire</a></li>
+</ul><div class="hdr-tools"><button aria-label="Switch to dark mode" class="icon-btn" id="theme-btn" type="button"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-13.5a1 1 0 0 1 1 1V6a1 1 0 1 1-2 0V4.5a1 1 0 0 1 1-1zm0 15a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1zM4.5 11H6a1 1 0 1 1 0 2H4.5a1 1 0 1 1 0-2zm13.5 0h1.5a1 1 0 1 1 0 2H18a1 1 0 1 1 0-2zM6.3 5a1 1 0 0 1 1.4 0l1 1A1 1 0 0 1 7.3 7.4l-1-1A1 1 0 0 1 6.3 5zm10 10a1 1 0 0 1 1.4 0l1 1a1 1 0 0 1-1.4 1.4l-1-1a1 1 0 0 1 0-1.4zm1.4-10a1 1 0 0 1 0 1.4l-1 1A1 1 0 0 1 15.3 6l1-1a1 1 0 0 1 1.4 0zM7.7 15a1 1 0 0 1 0 1.4l-1 1A1 1 0 0 1 5.3 16l1-1a1 1 0 0 1 1.4 0z"/></svg></button><button aria-label="التبديل إلى العربية" class="icon-btn" id="lang-btn" type="button">AR</button><button aria-label="Pause background video" class="icon-btn" id="motion-btn" title="Pause background video" type="button"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5h2.2v14H8.5zm4.8 0h2.2v14h-2.2z"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 5.2v13.6L19 12z"/></svg></button></div><button aria-expanded="false" aria-label="Menu" class="nav-toggle"><span></span><span></span><span></span></button></div>
+</nav>
+</header>
+<main id="main" tabindex="-1">
+<section class="hero has-video has-stage stage-sb">
+<div class="hero-stage" aria-hidden="true">
+<div class="hero-stage__img" style="background-image:url('../../assets/img/ph-sb-interior.webp')"></div>
+<video class="hero-stage__video" autoplay="" loop="" muted="" playsinline="" preload="none" poster="../../assets/video/hero-sb-poster.webp" data-src="../../assets/video/hero-sb.mp4" data-src-mobile="../../assets/video/hero-sb-m.mp4"></video>
+<canvas class="hero-stage__canvas"></canvas>
+<div class="hero-stage__scrim"></div>
+</div>
+<div class="wrap" style="grid-template-columns:1fr">
+<div class="hero-copy">
+<nav aria-label="Breadcrumb" class="crumbs"><a data-i18n="sb.011" href="../../index.html">Home</a> <span>/</span> <span data-i18n="sb.012">Smart Buildings</span></nav>
+<h1 data-i18n="sb.013" style="margin-top:14px">A building that <em>answers to you</em></h1>
+<p class="lead inv" data-i18n="sb.014" style="margin-top:14px">Open-protocol automation on ABB i-bus® KNX — lighting, climate, shading and metering under one head-end, engineered and commissioned by our own team in Muscat.</p>
+<div class="hero-badges">
+<span class="badge" data-i18n="sb.015">ABB System Integrator</span>
+<span class="badge" data-i18n="sb.016">KNX · BACnet · Modbus</span>
+<span class="badge" data-i18n="sb.017">DALI Lighting</span>
+<span class="badge" data-i18n="sb.018">Energy Analytics</span>
+</div>
+<div class="hero-actions">
+<a class="btn btn-cyan" data-i18n="sb.019" href="../../contact/index.html">Request a Consultation</a>
+<a class="btn btn-ghost" data-i18n="sb.940" href="../../smart-villa/index.html">Try the 3D Villa Simulator</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PROOF BAND ===== -->
+<section class="section" style="padding:56px 0">
+<div class="wrap stats">
+<div class="stat reveal"><b data-count="100">100<i>+</i></b><span data-i18n="sb.021">Private residences automated</span></div>
+<div class="stat reveal"><b data-count="3">3</b><span data-i18n="sb.022">ABB partner awards</span></div>
+<div class="stat reveal"><b data-count="4">4</b><span data-i18n="sb.023">Automation brands held</span></div>
+<div class="stat reveal"><b data-count="13">13<i>+</i></b><span data-i18n="sb.024">Years delivering automation</span></div>
+</div>
+</section>
+<!-- ===== PRINCIPAL AUTOMATION PARTNERSHIPS ===== -->
+<section class="section section-tint" id="brands">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.025">Principal partnerships</p>
+<h2 data-i18n="sb.026">Five names. One control layer.</h2>
+<p class="lead" data-i18n="sb.027">We hold the automation stack directly from the manufacturer — not through a reseller chain. That means genuine hardware, factory warranty, in-country stock and engineers trained by the brand that built it.</p>
+</div>
+<div class="grid grid-4 partner-grid">
+<article class="card reveal">
+<div class="card-img brand-tile"><img alt="ABB — authorised System Integrator for Building Automation Products in Oman" loading="lazy" src="../../assets/img/logos/abb.png"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.028">Wired · KNX</span><h3 data-i18n="sb.029">ABB i-bus® KNX</h3>
+<p data-i18n="sb.030">The backbone for new-build. Open KNX field layer, DALI lighting, HVAC control and metering, with ABB Millennium switch ranges as the finish the client actually touches.</p></div>
+</article>
+<article class="card reveal">
+<div class="card-img brand-tile"><img alt="LifeSmart — authorised wireless automation distributor for Oman" loading="lazy" src="../../assets/img/logos/lifesmart.png"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.031">Wireless · CoSS</span><h3 data-i18n="sb.032">LifeSmart</h3>
+<p data-i18n="sb.033">The retrofit answer. A complete wireless ecosystem — lighting, climate, sensing, cameras and scenes — for finished properties that cannot take new containment.</p></div>
+</article>
+<article class="card reveal">
+<div class="card-img brand-tile"><img alt="Yale — authorised access and security distributor for Oman" loading="lazy" src="../../assets/img/logos/yale.png"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.034">Access</span><h3 data-i18n="sb.035">Yale</h3>
+<p data-i18n="sb.036">Keyless entry integrated into the same scene logic as lighting and climate, so access is part of the building's behaviour rather than a separate app.</p></div>
+</article>
+<article class="card reveal">
+<div class="card-img brand-tile"><img alt="Intesis — authorised integration products distributor for Oman" loading="lazy" src="../../assets/img/logos/intesis.png"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.037">Integration</span><h3 data-i18n="sb.038">Intesis</h3>
+<p data-i18n="sb.039">Protocol gateways that bring third-party HVAC plant, meters and legacy panels onto KNX, BACnet or Modbus instead of stranding them outside the head-end.</p></div>
+</article>
+<article class="card reveal">
+<div class="card-img brand-tile"><img alt="PIERRE — smart building solutions, principal partner held by Mecamac" loading="lazy" src="../../assets/img/pierre-logo-navy.svg" width="131" height="30"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.901">Smart home · wired + wireless</span><h3 data-i18n="sb.902">PIERRE</h3>
+<p data-i18n="sb.903">The residential ecosystem. Wired PIERRE Pro or wireless PIERRE Wave, with 10-inch control panels, intercoms, locks and sensors on one platform that keeps working locally when the internet does not.</p></div>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="systems">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.040">System scope</p>
+<h2 data-i18n="sb.041">One control layer. Every building service.</h2>
+<p class="lead" data-i18n="sb.042">Energy is the largest controllable line in a building's running cost. The right control layer turns it into a number you can measure, attribute and reduce — without anyone inside noticing a compromise.</p>
+</div>
+<div class="grid grid-2">
+<article class="card reveal">
+<div class="card-img"><img alt="Architectural lighting scene control delivered by Mecamac in Oman" loading="lazy" src="../../assets/img/ph-sb-scene.webp"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.043">Lighting</span><h3 data-i18n="sb.044">Lighting Control &amp; DALI</h3>
+<p data-i18n="sb.045">DALI and KNX lighting with occupancy sensing, daylight harvesting and scene control, zoned per space type.</p></div>
+</article>
+<article class="card reveal">
+<div class="card-img"><img alt="Integrated building management and lighting control in an institutional interior by Mecamac" loading="lazy" src="../../assets/img/ph-sb-lighting.webp"/></div>
+<div class="card-body"><span class="tag" data-i18n="sb.046">BMS</span><h3 data-i18n="sb.047">Building Management &amp; Integration</h3>
+<p data-i18n="sb.048">One head-end for HVAC plant, lighting, metering and life-safety status. Open protocols — KNX, BACnet, Modbus — so the asset is never locked to one vendor.</p></div>
+</article>
+<article class="card reveal"><div class="card-img"><img alt="Intesis protocol gateway — brings HVAC plant, meters and legacy panels onto KNX, BACnet or Modbus" loading="lazy" src="../../assets/img/prod-intesis.webp"/></div><div class="card-body"><span class="tag" data-i18n="sb.049">Climate</span><h3 data-i18n="sb.050">HVAC Control &amp; Zoning</h3>
+<p data-i18n="sb.051">Room-level control, fan coil and VAV sequencing and occupancy setback — wired straight into the plant we deliver under <a href="../hvac/index.html" style="color:var(--cyan-dim);font-weight:600">HVAC</a>.</p></div>
+</article>
+<article class="card reveal"><div class="card-img"><img alt="The St. Regis Al Mouj Muscat Resort — architectural lighting control delivered by Mecamac" loading="lazy" src="../../assets/img/ref-st-regis.webp"/></div><div class="card-body"><span class="tag" data-i18n="sb.052">Façade</span><h3 data-i18n="sb.053">Façade &amp; Architectural Lighting</h3><p data-i18n="sb.054">DMX and DALI façade control with colour scenes, national-day programmes and astronomical scheduling — the part of the building everyone sees, running on the same head-end as everything they don't.</p><p class="card-ref" data-i18n="sb.055a"><strong>Reference:</strong> The St. Regis Al Mouj Muscat — lighting control across the resort, ballrooms and restaurants, delivered to operator brand standards. <a href="../../projects/index.html#projects">See the project ↗</a></p></div></article><article class="card reveal"><div class="card-img"><img alt="Commercial building with tenant sub-metering and energy analytics by Mecamac" loading="lazy" src="../../assets/img/ph-commercial.webp"/></div><div class="card-body"><span class="tag" data-i18n="sb.055">Energy</span><h3 data-i18n="sb.056">Metering &amp; Energy Analytics</h3>
+<p data-i18n="sb.057">Sub-metering by tenant, floor or system with trend logging — a consumption baseline that exposes energy drift before it reaches the bill.</p></div>
+</article>
+<article class="card reveal"><div class="card-img"><img alt="High-end residential and hospitality automation delivered by Mecamac" loading="lazy" src="../../assets/img/ph-hospitality.webp"/></div><div class="card-body"><span class="tag" data-i18n="sb.058">Residential</span><h3 data-i18n="sb.059">High-End Residential</h3>
+<p data-i18n="sb.060">Wired KNX for new-build villas and palaces; LifeSmart CoSS wireless where a finished property cannot accept new containment.</p></div>
+</article>
+</div>
+<div class="light-gallery reveal" style="margin-top:44px">
+<div class="lg-head">
+<p class="eyebrow" data-i18n="sb.945">Delivered scenes</p>
+<h3 data-i18n="sb.946">Façade, pergola, pool and garden lighting — programmed by us, photographed at handover</h3>
+<p class="lg-note" data-i18n="sb.947">Private villas in Muscat, 2024 — owners not named. Every fitting is on a dimming channel with astronomical sunset scheduling, so the house lights itself at dusk without anyone touching a switch.</p>
+</div>
+<div class="lg-grid">
+<figure><img alt="Villa façade lit at night with recessed and linear fittings — private villa, Muscat" loading="lazy" src="../../assets/img/ref-villa-facade-night.webp" width="1024" height="512"/><figcaption data-i18n="sb.948">Façade · grazing uplights and linear slots</figcaption></figure>
+<figure><img alt="Entrance pergola with linear lighting in the beams — private villa, Muscat" loading="lazy" src="../../assets/img/ref-pergola-lighting.webp" width="960" height="1280"/><figcaption data-i18n="sb.949">Entrance pergola · linear in-beam fittings</figcaption></figure>
+<figure><img alt="Pool and terrace lighting at night — private villa, Muscat" loading="lazy" src="../../assets/img/ref-pool-lighting.webp" width="1024" height="512"/><figcaption data-i18n="sb.950">Pool and terrace · underwater and step lights</figcaption></figure>
+<figure><img alt="Garden path lighting with bollards — private villa, Muscat" loading="lazy" src="../../assets/img/ref-landscape-lighting.webp" width="1024" height="512"/><figcaption data-i18n="sb.951">Garden · bollards on a sunset schedule</figcaption></figure>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== WIRED vs WIRELESS ===== -->
+<section class="section section-dark on-dark" id="choose">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.061">Choosing the platform</p>
+<h2 data-i18n="sb.062">Wired or wireless is a site decision, not a preference</h2>
+<p class="lead inv" data-i18n="sb.063">We hold both platforms, so the recommendation follows the building rather than the stock we happen to carry. A concrete villa under construction and a finished apartment are not the same problem.</p>
+</div>
+<div class="scroll-wrap reveal"><div class="table-scroll">
+<table class="cmp">
+<thead><tr><th data-i18n="sb.064" scope="col">Consideration</th><th data-i18n="sb.065" scope="col">ABB i-bus® KNX — wired</th><th data-i18n="sb.066" scope="col">LifeSmart CoSS — wireless</th></tr></thead>
+<tbody>
+<tr><th data-i18n="sb.067" scope="row">Best suited to</th><td data-i18n="sb.068">New build and full refurbishment, where containment can still be run</td><td data-i18n="sb.069">Completed properties, fit-outs and phased upgrades</td></tr>
+<tr><th data-i18n="sb.070" scope="row">Runs without internet</th><td data-i18n="sb.071">Yes — logic executes on the bus itself</td><td data-i18n="sb.072">Local scenes hold; remote access needs connectivity</td></tr>
+<tr><th data-i18n="sb.073" scope="row">Install disruption</th><td data-i18n="sb.074">Cabling required during first fix</td><td data-i18n="sb.075">No chasing, no new containment</td></tr>
+<tr><th data-i18n="sb.076" scope="row">Scale</th><td data-i18n="sb.077">Villas, palaces, hotels, whole commercial floors</td><td data-i18n="sb.078">Apartments, villas, single floors and staged rollouts</td></tr>
+<tr><th data-i18n="sb.079" scope="row">Integrates with BMS</th><td data-i18n="sb.080">Native — KNX, BACnet and Modbus to the head-end</td><td data-i18n="sb.081">Via gateway where a head-end is required</td></tr>
+<tr><th data-i18n="sb.082" scope="row">Handover package</th><td data-i18n="sb.083">Full topology, group addressing and project files</td><td data-i18n="sb.084">Account, device schedule and scene documentation</td></tr>
+</tbody>
+</table>
+</div></div>
+<p class="scroll-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h13M13 7l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="sb.900">Swipe to see the full table</span></p>
+
+<p class="reveal" data-i18n="sb.085" style="margin-top:22px;color:var(--text-inv-soft);font-size:.95rem">Both platforms are stocked in Muscat and commissioned by our own engineers. On mixed estates we run them side by side and bring both onto one head-end.</p>
+</div>
+</section>
+<!-- ===== APPS ===== -->
+<!-- ===== READINESS QUIZ ===== -->
+<section class="section" id="ready">
+<div class="wrap">
+<div class="rq-layout">
+<div class="section-head reveal" style="margin-bottom:0">
+<p class="eyebrow" data-i18n="sb.955">Two minutes</p>
+<h2 data-i18n="sb.956">Is your home ready for automation — and which way should it go?</h2>
+<p class="lead" data-i18n="sb.957">Six questions, no forms. You get a wired, hybrid or wireless recommendation with the reasons, then the simulator opens on that platform.</p>
+</div>
+<div class="reveal" id="ready-quiz"></div>
+</div>
+</div>
+</section>
+<!-- ===== 3D SMART VILLA SIMULATOR — TEASER ===== -->
+<section class="section section-dark on-dark sim-band" id="simulator">
+<div class="wrap">
+<div class="sim-grid">
+<a class="sim-shot reveal" href="../../smart-villa/index.html" aria-label="Open the 3D smart villa simulator">
+<img alt="Mecamac 3D smart villa simulator — a two-storey villa at night with every room lit from the control panel" src="../../assets/img/villa-sim.webp" width="1280" height="770" loading="lazy" decoding="async"/>
+<span class="sim-badge"><i aria-hidden="true"></i><span data-i18n="sb.960">Live 3D</span></span>
+<span class="sim-chips" aria-hidden="true"><span data-i18n="sb.961">ABB SmartTouch 10</span><span data-i18n="sb.962">ABB Yurika keypad</span><span data-i18n="sb.933">Approx. budget in seconds</span></span>
+</a>
+<div class="sim-copy reveal">
+<p class="eyebrow" data-i18n="sb.934">New — interactive</p>
+<h2 data-i18n="sb.935">Design your smart villa in 3D — before you build it</h2>
+<p class="lead" data-i18n="sb.936">Walk through a two-storey villa, switch scenes from an ABB SmartTouch® 10 panel and an ABB Yurika keypad, watch every light, blind and lock respond — then get an indicative budget for your own built-up area in seconds.</p>
+<ul class="checks sim-feats">
+<li data-i18n="sb.937"><strong>Live 3D villa</strong> — eight rooms on two floors, day and night.</li>
+<li data-i18n="sb.938"><strong>Real control surfaces</strong> — the ABB SmartTouch® 10 and the ABB Yurika keypad, at their true dimensions.</li>
+<li data-i18n="sb.939"><strong>Approximate budget</strong> — an indicative range for planning only, not a quotation; choose ABB, PIERRE or LifeSmart and send the plan to an engineer on WhatsApp.</li>
+</ul>
+<div class="hero-actions" style="margin-top:26px">
+<a class="btn btn-cyan" data-i18n="sb.941" href="../../smart-villa/index.html">Open the 3D simulator</a>
+<button class="btn btn-ghost" data-concierge="" data-i18n="sb.942" type="button">Ask the concierge</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="apps">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.086">In the owner's hand</p>
+<h2 data-i18n="sb.087">The part of the system the client uses every day</h2>
+<p class="lead" data-i18n="sb.088">Engineering decides whether a building performs. The app decides whether anyone enjoys living in it. Both platforms ship with a maintained mobile app, and we hand over the account structure with the building.</p>
+</div>
+<div class="video-split">
+<div class="phone-frame reveal">
+<span aria-hidden="true" class="glow"></span>
+<video aria-label="LifeSmart app on a tablet in a delivered Mecamac residence — room control, scenes and the door camera" autoplay="" loop="" muted="" playsinline="" poster="../../assets/video/app-reel-poster.webp" preload="none" data-lazy>
+<source data-src="../../assets/video/app-reel.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="reveal">
+<div class="app-cols">
+<div class="app-col">
+<h3 data-i18n="sb.089">LifeSmart app</h3>
+<ul class="checks">
+<li data-i18n="sb.090">Rooms, scenes and schedules on one screen</li>
+<li data-i18n="sb.091">Live camera, sensor and door status</li>
+<li data-i18n="sb.092">Alexa and Google Assistant voice control</li>
+<li data-i18n="sb.093">Guest and family access levels</li>
+</ul>
+</div>
+<div class="app-col">
+<h3 data-i18n="sb.094">ABB KNX visualisation</h3>
+<ul class="checks">
+<li data-i18n="sb.095">Floor-plan control across the whole property</li>
+<li data-i18n="sb.096">Energy and metering dashboards</li>
+<li data-i18n="sb.097">Scene, blind and climate scheduling</li>
+<li data-i18n="sb.098">Works locally if the internet drops</li>
+</ul>
+</div>
+</div>
+<p data-i18n="sb.099" style="margin-top:24px;color:var(--text-soft)">Accounts, device names and scene structure are set up in the client's own name and handed over documented — not left registered to the installer.</p>
+<div class="hero-actions" style="margin-top:22px">
+<a class="btn btn-navy" data-i18n="sb.100" href="../../contact/index.html">See it running in Qurum</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-dark on-dark">
+<div class="wrap video-split">
+<div class="portrait-video reveal">
+<video aria-label="Mecamac Smart Experience Centre, Qurum" autoplay="" loop="" muted="" playsinline="" poster="../../assets/video/showroom-tour-v-poster.webp" preload="none" data-lazy>
+<source data-src="../../assets/video/showroom-tour-v.mp4" type="video/mp4"/>
+</video>
+<span class="pv-tag" data-i18n="sb.101">Smart Experience Centre · Qurum</span>
+</div>
+<div class="reveal">
+<p class="eyebrow" data-i18n="sb.102">Smart Experience Centre</p>
+<h2 data-i18n="sb.103" style="margin-top:14px">Evaluate the system before you specify it</h2>
+<p class="lead inv" data-i18n="sb.104" style="margin:16px 0 24px">Lighting scenes, motorised shading, climate control and panel interfaces running as one integrated environment. Consultants and clients validate the control philosophy, hardware finish and user experience in person before it reaches the specification.</p>
+<ul class="checks">
+<li data-i18n="sb.105"><strong>Live control philosophy</strong> — scenes, schedules and overrides demonstrated exactly as they would be programmed on your project.</li>
+<li data-i18n="sb.106"><strong>Hardware finish selection</strong> — switch ranges, panels and touch interfaces compared side by side in real lighting conditions.</li>
+<li data-i18n="sb.107"><strong>Integration proof</strong> — lighting, HVAC control and shading responding through a single head-end rather than separate apps.</li>
+<li data-i18n="sb.108"><strong>Design-stage support</strong> — our engineers walk consultants through topology, addressing and commissioning implications on site.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section section-tint" id="how">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.109">How it works</p>
+<h2 data-i18n="sb.110">One bus. Every service on it.</h2>
+<p class="lead" data-i18n="sb.111">Sensors report in, actuators act out, and the logic lives in the wiring — not in a cloud account somebody has to keep paying for.</p>
+</div>
+<div class="diagram-wrap reveal"><svg class="sysdiag" viewBox="0 0 1180 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KNX bus topology showing sensors and actuators on a single wired bus with a BMS head-end">
+  <style>
+    .dgshell{fill:none;stroke:#2E7C97;stroke-width:2}
+    .dgbox rect{fill:#0E2436;stroke:#2E7C97;stroke-width:1.5}
+    .dgbox.dgb rect{fill:#0C1E30;stroke:#1E5A73}
+    .dgt{fill:#FFFFFF;font-family:Sora,Arial,sans-serif;font-size:15px;font-weight:600}
+    .dgs{fill:#9ADDF0;font-family:Sora,Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:1.4px}
+    .dgcap{fill:#7FC4DE;font-family:Sora,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:2.4px}
+    .dglab{font-family:Sora,Arial,sans-serif;font-size:26px;font-weight:800}
+    .dgcM{fill:#56C6E6}.dgcE{fill:#9ADDF0}.dgcP{fill:#2E7C97}
+    .dgrun{fill:none;stroke:#56C6E6;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .dgrun.dgM{stroke:#56C6E6}
+    .dgrun.dgE{stroke:#9ADDF0}
+    .dgrun.dgP{stroke:#2E7C97}
+    .dgrun.dgRet{stroke:#9ADDF0;opacity:.75}
+    .dgbus{fill:none;stroke:#56C6E6;stroke-width:4;stroke-linecap:round}
+    .dgnode circle{fill:#56C6E6}
+    .dgterm{fill:#56C6E6;opacity:.55}
+    .dgterm2{fill:#2E7C97}
+    .dgpulse{opacity:.95}
+  </style>
+<defs>
+  <linearGradient id="dgBg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#00111C"/><stop offset="55%" stop-color="#0A1B2A"/><stop offset="100%" stop-color="#002E4B"/>
+  </linearGradient>
+  <pattern id="dgGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#56C6E6" stroke-width="1" opacity=".06"/>
+  </pattern>
+  <filter id="dgGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1180" height="620" fill="url(#dgBg)" rx="14"/>
+<rect width="1180" height="620" fill="url(#dgGrid)" rx="14"/>
+<g class="dgbox"><rect x="60" y="250" width="150" height="84" rx="8"/><text x="135.0" y="287.0" text-anchor="middle" class="dgt">Head-End</text><text x="135.0" y="307.0" text-anchor="middle" class="dgs">BMS / visualisation</text></g><path class="dgbus" d="M270 292h820"/><path class="dgrun" d="M210 292h60" /><circle class="dgpulse" r="5" fill="#56C6E6" filter="url(#dgGlow)"><animateMotion dur="5s" begin="0s" repeatCount="indefinite" path="M240 292h850"/></circle><circle class="dgpulse" r="5" fill="#9ADDF0" filter="url(#dgGlow)"><animateMotion dur="5s" begin="2.5s" repeatCount="indefinite" path="M1090 292H240"/></circle><text x="600" y="272" text-anchor="middle" class="dgs">KNX TWISTED-PAIR BUS · RUNS WITHOUT THE NETWORK</text><path class="dgrun" d="M330 292V190"/><g class="dgbox"><rect x="268" y="130" width="124" height="60" rx="8"/><text x="330.0" y="165.0" text-anchor="middle" class="dgt">Presence</text></g><g class="dgnode"><circle cx="330" cy="292" r="7"/><text x="330" y="276" text-anchor="middle" class="dgs"></text></g><path class="dgrun" d="M500 292V190"/><g class="dgbox"><rect x="438" y="130" width="124" height="60" rx="8"/><text x="500.0" y="165.0" text-anchor="middle" class="dgt">Daylight</text></g><g class="dgnode"><circle cx="500" cy="292" r="7"/><text x="500" y="276" text-anchor="middle" class="dgs"></text></g><path class="dgrun" d="M670 292V190"/><g class="dgbox"><rect x="608" y="130" width="124" height="60" rx="8"/><text x="670.0" y="165.0" text-anchor="middle" class="dgt">Panel</text></g><g class="dgnode"><circle cx="670" cy="292" r="7"/><text x="670" y="276" text-anchor="middle" class="dgs"></text></g><path class="dgrun" d="M840 292V190"/><g class="dgbox"><rect x="778" y="130" width="124" height="60" rx="8"/><text x="840.0" y="165.0" text-anchor="middle" class="dgt">Thermostat</text></g><g class="dgnode"><circle cx="840" cy="292" r="7"/><text x="840" y="276" text-anchor="middle" class="dgs"></text></g><path class="dgrun" d="M1010 292V190"/><g class="dgbox"><rect x="948" y="130" width="124" height="60" rx="8"/><text x="1010.0" y="165.0" text-anchor="middle" class="dgt">Weather</text></g><g class="dgnode"><circle cx="1010" cy="292" r="7"/><text x="1010" y="276" text-anchor="middle" class="dgs"></text></g><path class="dgrun" d="M330 292v104"/><g class="dgbox"><rect x="268" y="396" width="124" height="60" rx="8"/><text x="330.0" y="431.0" text-anchor="middle" class="dgt">Lighting</text></g><path class="dgrun" d="M500 292v104"/><g class="dgbox"><rect x="438" y="396" width="124" height="60" rx="8"/><text x="500.0" y="431.0" text-anchor="middle" class="dgt">Dimming</text></g><path class="dgrun" d="M670 292v104"/><g class="dgbox"><rect x="608" y="396" width="124" height="60" rx="8"/><text x="670.0" y="431.0" text-anchor="middle" class="dgt">Blinds</text></g><path class="dgrun" d="M840 292v104"/><g class="dgbox"><rect x="778" y="396" width="124" height="60" rx="8"/><text x="840.0" y="431.0" text-anchor="middle" class="dgt">Fan Coil</text></g><path class="dgrun" d="M1010 292v104"/><g class="dgbox"><rect x="948" y="396" width="124" height="60" rx="8"/><text x="1010.0" y="431.0" text-anchor="middle" class="dgt">Façade</text></g><text x="60" y="586" class="dgcap">SENSORS IN · ACTUATORS OUT · ONE BUS, ONE LOGIC, NO CLOUD DEPENDENCY</text>
+</svg><div class="diagram-cap"><b data-i18n="sb.112">KNX system topology</b><span data-i18n="sb.113">Presence, daylight and panel inputs driving lighting, dimming, blinds, fan coils and façade on a single wired bus</span></div></div>
+</div>
+</section>
+<section class="section" id="in-service">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.114">In service</p>
+<h2 data-i18n="sb.115">Not a showroom. A handed-over building.</h2>
+<p class="lead" data-i18n="sb.116">Yale access, LifeSmart panels and scene control running in delivered residences — the same hardware and the same commissioning discipline we bring to a hotel or an office floor.</p>
+</div>
+<div class="proof-strip">
+<figure class="proof-clip reveal">
+<video aria-label="Yale smart lock, wall panels and app control running in a delivered Mecamac residence" autoplay="" loop="" muted="" playsinline="" poster="../../assets/video/auto-installed-poster.webp" preload="none" data-lazy>
+<source data-src="../../assets/video/auto-installed.mp4" type="video/mp4"/>
+</video>
+<figcaption><b data-i18n="sb.119">Access, panels &amp; app</b><span data-i18n="sb.120">Yale · LifeSmart · delivered residence</span></figcaption>
+</figure>
+<figure class="proof-clip reveal">
+<video aria-label="LifeSmart wall panels and keypads installed by Mecamac" autoplay="" loop="" muted="" playsinline="" poster="../../assets/video/auto-panels-poster.webp" preload="none" data-lazy>
+<source data-src="../../assets/video/auto-panels.mp4" type="video/mp4"/>
+</video>
+<figcaption><b data-i18n="sb.930">Wall panels &amp; keypads</b><span data-i18n="sb.931">LifeSmart · scene, blind and lighting control</span></figcaption>
+</figure>
+<div class="proof-note reveal">
+<p class="eyebrow" data-i18n="sb.121">What you are looking at</p>
+<ul class="checks">
+<li data-i18n="sb.122"><strong>Keyless access</strong> — Yale locks integrated into the same scenes as lighting and climate.</li>
+<li data-i18n="sb.123"><strong>Wall panels</strong> — room, floor and whole-property control without opening an app.</li>
+<li data-i18n="sb.124"><strong>Scene control</strong> — one press for a defined lighting, blind and temperature state.</li>
+<li data-i18n="sb.125"><strong>App layer</strong> — the same logic reachable from anywhere, with the bus still running if the internet is not.</li>
+</ul>
+<div class="hero-actions" style="margin-top:22px">
+<a class="btn btn-navy" data-i18n="sb.126" href="../../contact/index.html">Discuss a Project</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-dark on-dark">
+<div class="wrap">
+<div class="section-head reveal">
+<p class="eyebrow" data-i18n="sb.127">Why architecture matters</p>
+<h2 data-i18n="sb.128">Specify it once. Operate it for decades.</h2>
+<p class="lead inv" data-i18n="sb.129">The decisions that determine whether a building automation system still performs in year ten are made at design stage, not at commissioning.</p>
+</div>
+<div class="cap-grid" style="margin-top:40px">
+<div class="cap reveal"><i data-i18n="sb.130">Open protocol</i><b data-i18n="sb.131">No vendor lock-in</b><span data-i18n="sb.132">KNX, BACnet and Modbus keep the asset open to future devices and integrators rather than tied to a proprietary ecosystem.</span></div><div class="cap reveal"><i data-i18n="sb.133">Resilience</i><b data-i18n="sb.134">Runs without the network</b><span data-i18n="sb.135">A wired KNX bus continues to execute logic locally if the IP network or internet fails — only remote access depends on connectivity.</span></div><div class="cap reveal"><i data-i18n="sb.136">Scalability</i><b data-i18n="sb.137">Extends per phase</b><span data-i18n="sb.138">Topology sized for the completed masterplan so later phases connect without re-engineering the backbone.</span></div><div class="cap reveal"><i data-i18n="sb.139">Documentation</i><b data-i18n="sb.140">Handover you can operate</b><span data-i18n="sb.141">As-built topology, device schedules, group addressing and programming files transferred to the client, not retained by the integrator.</span></div><div class="cap reveal"><i data-i18n="sb.142">Commissioning</i><b data-i18n="sb.143">Witnessed and evidenced</b><span data-i18n="sb.144">Functional performance testing against the control philosophy, with signed records for each sequence.</span></div><div class="cap reveal"><i data-i18n="sb.145">Support</i><b data-i18n="sb.146">Life-cycle programmes</b><span data-i18n="sb.147">Structured AMC with reprogramming, firmware management and control retuning as occupancy patterns change.</span></div>
+</div>
+<div style="margin-top:56px">
+<p class="eyebrow reveal" data-i18n="sb.148" style="margin-bottom:20px">Principal partnerships for this scope</p>
+<div class="brand-grid reveal" style="grid-template-columns:repeat(4,1fr);max-width:720px"><a class="logo-chip" href="https://new.abb.com/low-voltage/products/building-automation" rel="noopener" target="_blank" title="Visit ABB Building Automation"><img alt="ABB logo" loading="lazy" src="../../assets/img/logos/abb.png"/></a><a class="logo-chip" href="https://iot.ilifesmart.com" rel="noopener" target="_blank" title="Visit LifeSmart"><img alt="LifeSmart logo" loading="lazy" src="../../assets/img/logos/lifesmart.png"/></a><a class="logo-chip" href="https://www.yalehome.com" rel="noopener" target="_blank" title="Visit Yale"><img alt="Yale logo" loading="lazy" src="../../assets/img/logos/yale.png"/></a><a class="logo-chip" href="https://www.hms-networks.com/intesis" rel="noopener" target="_blank" title="Visit Intesis by HMS Networks"><img alt="Intesis logo" loading="lazy" src="../../assets/img/logos/intesis.png"/></a></div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="wrap" style="max-width:880px">
+<div class="section-head reveal"><p class="eyebrow" data-i18n="sb.149">Technical questions</p><h2 data-i18n="sb.150">Specification &amp; integration</h2></div>
+<details class="reveal"><summary data-i18n="sb.151">Which protocols do you work with, and can you integrate legacy plant?</summary><p data-i18n="sb.152">We design primarily on KNX for the field layer and BACnet/IP or Modbus at the plant and head-end layer. Legacy equipment is integrated through gateways where native protocol support is absent, and we survey existing panels before committing to an integration approach so the scope is known rather than assumed.</p></details>
+<details class="reveal"><summary data-i18n="sb.153">How do you avoid vendor lock-in for the client?</summary><p data-i18n="sb.154">By specifying open protocols and transferring the complete programming set at handover — topology, group addressing, device schedules and project files. The client can appoint any competent KNX or BACnet integrator afterwards. This is a deliberate commercial position: we would rather be retained on merit than by dependency.</p></details>
+<details class="reveal"><summary data-i18n="sb.155">What documentation do you issue for consultants and tender submissions?</summary><p data-i18n="sb.156">Compliance statements against the specification, manufacturer authorisation letters, control philosophy documents, riser and topology drawings, device schedules, and I/O point lists. Testing and commissioning records follow the agreed witnessing regime.</p></details>
+<details class="reveal"><summary data-i18n="sb.157">How is the system commissioned and verified?</summary><p data-i18n="sb.158">Pre-commissioning checks on containment, addressing and power, followed by point-to-point verification, then functional performance testing of each control sequence against the philosophy. Results are recorded per sequence and witnessed by the consultant where required.</p></details>
+<details class="reveal"><summary data-i18n="sb.159">Can the system support energy and sustainability reporting?</summary><p data-i18n="sb.160">Yes. Sub-metering architecture is designed at the outset so consumption can be attributed by tenant, floor or system. Trend data is retained and exported for reporting, and the analytics layer highlights energy drift so corrective action rests on evidence rather than assumption.</p></details>
+</div>
+</section>
+<section class="cta-band" id="contact">
+<div class="wrap">
+<h2 data-i18n="sb.161">Bring us in at design stage</h2>
+<p data-i18n="sb.162">The earlier the control layer is coordinated with the electrical and mechanical design, the less it costs and the better it performs. Send us drawings or a specification.</p>
+<div class="hero-actions" style="justify-content:center">
+<a class="btn btn-cyan" data-i18n="sb.163" href="../../contact/index.html">Request a Consultation</a>
+<a class="btn btn-ghost" data-i18n="sb.164" href="../hvac/index.html">HVAC Capability</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div>
+<img alt="Mecamac logo" src="../../assets/img/logo-cyan.png"/>
+<p data-i18n="sb.165">Head office, Al Misfah — Muscat, Sultanate of Oman. Turnkey electromechanical contracting, smart building automation, HVAC and mission-critical data centre delivery. ISO 9001:2015 certified, serving Oman and the GCC since 2010.</p>
+<div aria-label="Social media" class="socials">
+<a aria-label="Instagram" href="https://www.instagram.com/mecamac" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.7.3-.4.2-.7.4-1 .7-.3.3-.5.6-.7 1-.1.2-.2.6-.3 1.7-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.7.2.4.4.7.7 1 .3.3.6.5 1 .7.2.1.6.2 1.7.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.7-.3.4-.2.7-.4 1-.7.3-.3.5-.6.7-1 .1-.2.2-.6.3-1.7.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.7-.2-.4-.4-.7-.7-1-.3-.3-.6-.5-1-.7-.2-.1-.6-.2-1.7-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-2.1a1.1 1.1 0 1 1 0 2.3 1.1 1.1 0 0 1 0-2.3z"/></svg></a>
+<a aria-label="Facebook" href="https://www.facebook.com/MECAMACOMAN" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/mecamac" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4z"/></svg></a>
+<a aria-label="WhatsApp" href="https://wa.me/96872160022" rel="noopener" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .8 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg></a>
+</div>
+</div>
+<div>
+<h2 class="foot-h" data-i18n="sb.166">Capabilities</h2>
+<ul>
+<li><a data-i18n="sb.167" href="../../services/smart-building/index.html">Smart Buildings</a></li>
+<li><a data-i18n="sb.991" href="../../smart-villa/index.html">3D Smart Villa Simulator</a></li>
+<li><a data-i18n="sb.168" href="../../services/hvac/index.html">HVAC &amp; Air Conditioning</a></li>
+<li><a data-i18n="sb.169" href="../../services/contracting/index.html">Contracting &amp; MEP</a></li>
+<li><a data-i18n="sb.170" href="../../services/data-center/index.html">Data Centres</a></li>
+</ul>
+</div>
+<div>
+<h2 class="foot-h" data-i18n="sb.171">Company</h2>
+<ul>
+<li><a data-i18n="sb.172" href="../../projects/index.html">Projects</a></li>
+<li><a data-i18n="sb.993" href="../../credentials/index.html">Credentials</a></li>
+<li><a data-i18n="sb.173" href="../../index.html#brands">Key Brands</a></li>
+<li><a data-i18n="sb.174" href="../../index.html#facilities">Facilities</a></li>
+<li><a data-i18n="sb.175" href="../../contact/index.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h2 class="foot-h" data-i18n="sb.176">Head Office &amp; Showroom — Oman</h2>
+<ul>
+<li data-i18n="sb.178">Head office, operations, factory, warehousing &amp; R&amp;D: Al Misfah Industrial Area, Muscat</li>
+<li data-i18n="sb.177">Smart Experience Centre: Bank Muscat Building, Qurum Commercial District, Muscat</li>
+<li class="foot-tels"><a href="tel:+96872160022">+968 7216 0022</a><a href="tel:+96899680012">+968 9968 0012</a><a href="tel:+96824564868">+968 2456 4868</a></li>
+<li><a data-i18n="sb.179" href="mailto:info@mecamac.com">info@mecamac.com</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-i18n="sb.180">© 2026 Mecamac. All rights reserved.</span>
+<span class="footer-cities" data-i18n="sb.181">Muscat · Dubai · Riyadh · Beirut</span>
+<a class="footer-privacy" data-i18n="sb.990" href="../../privacy/index.html">Privacy</a>
+<a aria-label="Powered by INTU — Integrated Technology Unit" class="powered" href="https://www.intuservices.com" rel="noopener" target="_blank"><span data-i18n="sb.182">Powered by</span><img alt="INTU — Integrated Technology Unit" src="../../assets/img/logos/intu-white.png"/></a>
+</div>
+</div>
+</footer>
+<a aria-label="Chat on WhatsApp" class="wa-float" href="https://wa.me/96872160022" rel="noopener" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .8 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.3.7-.2.3.1 1.8.9 2.1 1 .3.2.5.2.6.4.1.1.1.7-.1 1.3z"/></svg>
+</a>
+<script src="../../assets/js/i18n.js"></script>
+<script defer="" src="../../assets/js/plexus.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script defer src="../../assets/js/motion.js"></script>
+<script defer src="../../assets/js/lazyvideo.js"></script>
+<script src="../../assets/js/concierge.js"></script>
+<script src="../../assets/js/quiz.js"></script>
+</body>
+</html>

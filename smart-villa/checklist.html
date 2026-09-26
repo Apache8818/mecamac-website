@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<!-- permanent — print-only sheet, never indexed -->
+<meta content="noindex, follow" name="robots"/>
+<meta content="A printable pre-wiring checklist for a smart villa in Oman — boxes, containment and cable types room by room, generated from the Mecamac 3D simulator." name="description"/>
+<title>Smart villa pre-wiring checklist — Mecamac</title>
+<link href="../assets/img/logo-navy.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0F2A3E;--navy-deep:#04141F;--cyan:#56C6E6;--cyan-dim:#2E7C97;--ink:#0B1B27;--soft:#4E6272;--line:#D6E1EA;--tint:#EEF5F9;--ff:Inter,"IBM Plex Sans Arabic",system-ui,sans-serif;--ffd:"Space Grotesk","IBM Plex Sans Arabic",Inter,sans-serif}
+*{box-sizing:border-box}
+html{background:#e9eef2}
+body{margin:0;font-family:var(--ff);color:var(--ink);line-height:1.5;font-size:13.5px}
+html[dir=rtl] body{font-family:"IBM Plex Sans Arabic",Inter,sans-serif}
+.sheet{background:#fff;max-width:210mm;margin:24px auto;padding:18mm 16mm;box-shadow:0 20px 60px rgba(0,10,20,.15)}
+.tools{max-width:210mm;margin:18px auto 0;display:flex;flex-wrap:wrap;gap:10px;padding:0 16px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font-family:var(--ffd);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid var(--line);background:#fff;color:var(--navy)}
+html[dir=rtl] .btn{letter-spacing:0;text-transform:none;font-size:.92rem}
+.btn.primary{background:var(--cyan);border-color:var(--cyan);color:var(--navy-deep)}
+.btn.wa{background:#127038;border-color:#127038;color:#fff}
+header.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;border-bottom:2px solid var(--navy);padding-bottom:12px;margin-bottom:16px}
+header.top img{height:34px}
+header.top .meta{text-align:end;font-size:.78rem;color:var(--soft)}
+h1{font-family:var(--ffd);font-size:1.5rem;margin:0 0 4px;color:var(--navy)}
+.sub{color:var(--soft);margin:0 0 14px}
+.plan{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 16px}
+.plan div{background:var(--tint);border-radius:10px;padding:8px 10px}
+.plan b{display:block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);font-family:var(--ffd)}
+html[dir=rtl] .plan b{letter-spacing:0;text-transform:none;font-size:.76rem}
+.plan span{font-weight:600}
+h2{font-family:var(--ffd);font-size:1rem;margin:18px 0 8px;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:4px}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:start;vertical-align:top}
+th{background:var(--tint);font-family:var(--ffd);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+html[dir=rtl] th{letter-spacing:0;text-transform:none;font-size:.8rem}
+td.c{text-align:center;width:28px}
+.box{display:inline-block;width:12px;height:12px;border:1.5px solid var(--navy);border-radius:3px;vertical-align:middle}
+ul.gen{margin:0;padding-inline-start:18px}
+ul.gen li{margin-bottom:4px}
+.note{margin-top:14px;padding:10px 12px;border:1px dashed var(--line);border-radius:10px;font-size:.76rem;color:var(--soft)}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;font-size:.8rem}
+.sig div{border-top:1px solid var(--navy);padding-top:6px;color:var(--soft)}
+footer.foot{margin-top:18px;font-size:.72rem;color:var(--soft);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media print{html{background:#fff}.sheet{box-shadow:none;margin:0;padding:12mm 12mm;max-width:none}.tools{display:none}@page{size:A4;margin:8mm}tr{break-inside:avoid}h2{break-after:avoid}}
+@media (max-width:640px){.plan{grid-template-columns:1fr 1fr}.sheet{padding:18px 16px;margin:12px}}
+</style>
+<meta content="#04141F" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="Smart villa pre-wiring checklist — Mecamac" property="og:title"/>
+<meta content="A printable pre-wiring checklist for a smart villa in Oman — boxes, containment and cable types room by room, generated from the Mecamac 3D simulator." property="og:description"/>
+<meta content="en_OM" property="og:locale"/>
+<meta content="https://www.mecamac.com/smart-villa/checklist.html" property="og:url"/>
+<meta content="https://www.mecamac.com/assets/img/og-cover.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+</head>
+<body>
+<a class="skip-link" href="#sheet" data-i18n="ui.skip">Skip to content</a>
+<div class="tools" id="tools"></div>
+<main class="sheet" id="sheet" tabindex="-1"></main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var lang = q.get('lang') === 'ar' ? 'ar' : (q.get('lang') === 'en' ? 'en' : (function () { try { return localStorage.getItem('mecamac-lang') === 'ar' ? 'ar' : 'en'; } catch (e) { return 'en'; } })());
+  document.documentElement.lang = lang; document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  var brand = ['abb', 'lifesmart'].indexOf(q.get('brand')) >= 0 ? q.get('brand') : 'abb';
+  var size = Math.max(120, Math.min(3000, parseInt(q.get('size'), 10) || 450)), floors = Math.max(1, Math.min(3, parseInt(q.get('floors'), 10) || 2));
+  var f = {}; (q.get('f') || 'lighting,blinds,ac,access').split(',').forEach(function (k) { f[k] = true; });
+  var wired = brand === 'abb';
+  var n = Math.max(4, Math.round(size / 38));
+  var T = {
+    en: { title: 'Smart villa pre-wiring checklist', sub: 'Generated from your plan in the Mecamac 3D simulator. Hand it to your architect, electrical consultant or main contractor — these are the points to reserve before the walls close.',
+      brand: { abb: 'ABB i-bus® KNX (wired)', lifesmart: 'LifeSmart CoSS (wireless)' }, platform: 'Platform', area: 'Built-up area', floorsL: 'Floors', spaces: 'Controlled spaces',
+      date: 'Issued', ref: 'Reference', print: 'Save as PDF / Print', back: 'Back to the simulator', wa: 'Send to an engineer',
+      rooms: ['Majlis', 'Living room', 'Dining', 'Kitchen', 'Master bedroom', 'Bedroom', 'Family room', 'Study', 'Entrance hall', 'Corridors & stairs', 'Outdoor & garden', 'Garage & service'],
+      h_room: 'Space', h_pts: 'Points to reserve', h_done: 'Done', h_notes: 'Notes / drawing ref.',
+      pts: { keypad: wired ? 'Keypad by the door: flush box 1× at 1.10 m + bus loop' : 'Switch by the door: standard flush box, neutral + live at every switch point',
+             light: wired ? 'Lighting: every circuit back to the DB (no loop-in at switches), dimmable drivers' : 'Lighting: neutral present at every switch, dimmable drivers',
+             blind: 'Blinds/curtains: 230 V supply at the pelmet + control cable to the motor', ac: wired ? 'Thermostat: flush box at 1.50 m, bus + FCU control cable (0–10 V / relay)' : 'Thermostat: flush box at 1.50 m with neutral; FCU interface at the unit',
+             sensor: 'Presence & climate sensor: ceiling box near the room centre' + (wired ? ' + bus' : ''), panel: 'Wall panel: flush back-box, Cat6 + 230 V (or PoE) at 1.40 m', lock: 'Smart lock: door prep + 12 V/PoE and intercom cable', cam: 'Camera: Cat6 to the entrance / driveway / rear', audio: 'Audio: speaker cable pair + Cat6 to the amplifier location', irr: 'Irrigation: 24 V valves cabled to the controller position, Wi-Fi/LAN present' },
+      gen: 'General provisions', genList: [
+        wired ? 'KNX bus: 2×2×0.8 mm² green certified cable in its own 20 mm conduit, looped room to room; never in the same conduit as 230 V' : 'Wireless mesh: keep a metal-free path between rooms; add a repeater per floor and outbuilding',
+        'Distribution board: reserve ' + Math.max(2, Math.round(n / 5)) + ' extra DIN rows per floor for actuators and dimmers, with a separate 230 V feed on an RCBO',
+        'Controller / gateway: a ventilated cupboard or rack with 4 × Cat6, 230 V on a small UPS, and a LAN point to the router',
+        'Wi-Fi: one access point per ~120 m² per floor, cabled Cat6 to the rack',
+        'Labelling: every cable tagged at both ends with the room and circuit number; as-built marked on the drawings',
+        'Coordination: keypad positions agreed with the interior designer before first fix; panel heights checked against furniture'],
+      sign: ['Prepared by (Mecamac engineer)', 'Client / consultant'], note: 'Quantities follow the plan above (about one controlled space per 38 m²). This is a pre-wiring guide, not a design; the final containment and loads are confirmed by Mecamac after a site survey. Prices, where mentioned on the site, are approximate and for budgeting only.',
+      foot: 'Mecamac — Al Misfah, Muscat · +968 7216 0022 · info@mecamac.com · mecamac.com', waMsg: 'Hello Mecamac, here is my pre-wiring checklist from the simulator:' },
+    ar: { title: 'قائمة تجهيز التمديدات للفيلا الذكية', sub: 'مُولَّدة من خطتك في محاكي ميكاماك ثلاثي الأبعاد. سلّمها للمهندس المعماري أو استشاري الكهرباء أو المقاول الرئيسي — هذه النقاط التي يجب حجزها قبل إغلاق الجدران.',
+      brand: { abb: 'ABB i-bus® KNX (سلكي)', lifesmart: 'LifeSmart CoSS (لاسلكي)' }, platform: 'المنصة', area: 'المساحة المبنية', floorsL: 'الطوابق', spaces: 'المساحات المتحكَّم بها',
+      date: 'تاريخ الإصدار', ref: 'المرجع', print: 'احفظ PDF / اطبع', back: 'رجوع إلى المحاكي', wa: 'أرسل لمهندس',
+      rooms: ['المجلس', 'غرفة المعيشة', 'الطعام', 'المطبخ', 'غرفة النوم الرئيسية', 'غرفة نوم', 'غرفة العائلة', 'المكتب', 'المدخل', 'الممرات والدرج', 'الخارج والحديقة', 'الكراج والخدمات'],
+      h_room: 'المساحة', h_pts: 'النقاط المطلوب حجزها', h_done: 'تم', h_notes: 'ملاحظات / مرجع المخطط',
+      pts: { keypad: wired ? 'مفتاح بجانب الباب: علبة مدفونة 1× على ارتفاع 1.10 م + حلقة ناقل' : 'مفتاح بجانب الباب: علبة مدفونة عادية، محايد + فاز عند كل نقطة مفتاح',
+             light: wired ? 'الإنارة: كل دائرة ترجع للوحة التوزيع (بدون تمرير عند المفاتيح)، محركات قابلة للتعتيم' : 'الإنارة: محايد عند كل مفتاح، محركات قابلة للتعتيم',
+             blind: 'الستائر: تغذية 230 فولت عند الصندوق العلوي + كابل تحكم للموتور', ac: wired ? 'الثيرموستات: علبة مدفونة على 1.50 م، ناقل + كابل تحكم للـ FCU (0–10 فولت / ريليه)' : 'الثيرموستات: علبة مدفونة على 1.50 م مع محايد؛ واجهة FCU عند الوحدة',
+             sensor: 'مستشعر الحضور والمناخ: علبة سقفية قرب منتصف الغرفة' + (wired ? ' + ناقل' : ''), panel: 'الشاشة الحائطية: علبة خلفية مدفونة، Cat6 + 230 فولت (أو PoE) على 1.40 م', lock: 'القفل الذكي: تجهيز الباب + 12 فولت/PoE وكابل الإنتركم', cam: 'كاميرا: Cat6 إلى المدخل / الممر / الخلف', audio: 'الصوت: زوج كابل سماعات + Cat6 إلى موقع المضخّم', irr: 'الري: صمامات 24 فولت مكبّلة إلى موقع وحدة التحكم، مع Wi-Fi/LAN' },
+      gen: 'تجهيزات عامة', genList: [
+        wired ? 'ناقل KNX: كابل أخضر معتمد 2×2×0.8 مم² في مواسير 20 مم خاصة به، يمرّ من غرفة إلى غرفة؛ لا يوضع أبداً في نفس الماسورة مع 230 فولت' : 'الشبكة اللاسلكية: مسار خالٍ من المعادن بين الغرف؛ مكرّر لكل طابق وملحق خارجي',
+        'لوحة التوزيع: احجز ' + Math.max(2, Math.round(n / 5)) + ' صفوف DIN إضافية لكل طابق للمشغّلات والمعتّمات، مع تغذية 230 فولت منفصلة على RCBO',
+        'وحدة التحكم / البوابة: خزانة أو راك مهوّى مع 4 × Cat6، و230 فولت على UPS صغير، ونقطة LAN إلى الراوتر',
+        'Wi-Fi: نقطة وصول لكل ~120 م² في كل طابق، مكبّلة Cat6 إلى الراك',
+        'الترميز: كل كابل موسوم من الطرفين برقم الغرفة والدائرة؛ وتوثيق «كما نُفِّذ» على المخططات',
+        'التنسيق: مواقع المفاتيح تُعتمد مع مصمم الديكور قبل التمديد الأول؛ وارتفاعات الشاشات تُراجع مع الأثاث'],
+      sign: ['أعدّه (مهندس ميكاماك)', 'العميل / الاستشاري'], note: 'الكميات تتبع الخطة أعلاه (نحو مساحة متحكَّم بها لكل 38 م²). هذا دليل تجهيز تمديدات وليس تصميماً؛ التمديدات والأحمال النهائية تؤكدها ميكاماك بعد معاينة الموقع. الأسعار، حيث ذُكرت في الموقع، تقريبية ولتقدير الميزانية فقط.',
+      foot: 'ميكاماك — المسفاة، مسقط · +968 7216 0022 · info@mecamac.com · mecamac.com', waMsg: 'مرحباً ميكاماك، هذه قائمة تجهيز التمديدات من المحاكي:' }
+  };
+  var t = T[lang], num = function (x) { try { return new Intl.NumberFormat(lang === 'ar' ? 'ar-EG' : 'en-GB').format(x); } catch (e) { return String(x); } };
+  // room list sized to the plan: fixed rooms + extra bedrooms
+  var rooms = [];
+  var base = [0, 1, 2, 3, 4, 6, 8, 9, 10, 11];               // indexes into t.rooms
+  var beds = Math.max(1, n - base.length - (size > 600 ? 1 : 0));
+  base.forEach(function (i) { rooms.push(t.rooms[i]); });
+  if (size > 600) rooms.splice(7, 0, t.rooms[7]);           // study
+  for (var i = 1; i <= Math.min(beds, 8); i++) rooms.splice(5 + i - 1, 0, t.rooms[5] + ' ' + num(i));
+  function ptsFor(room, idx) {
+    var p = [t.pts.keypad];
+    if (f.lighting) p.push(t.pts.light);
+    var outdoor = idx >= rooms.length - 2, entrance = room === t.rooms[8], service = room === t.rooms[11];
+    if (f.blinds && !outdoor && !service && room !== t.rooms[9]) p.push(t.pts.blind);
+    if (f.ac && !outdoor && room !== t.rooms[9]) p.push(t.pts.ac);
+    if (!service) p.push(t.pts.sensor);
+    if (entrance) { p.push(t.pts.panel); if (f.access) p.push(t.pts.lock); }
+    if (room === t.rooms[1] && floors > 1) p.push(t.pts.panel);
+    if (f.cameras && (entrance || outdoor)) p.push(t.pts.cam);
+    if (f.audio && (room === t.rooms[0] || room === t.rooms[1] || room === t.rooms[4] || room === t.rooms[6])) p.push(t.pts.audio);
+    if (f.irrigation && room === t.rooms[10]) p.push(t.pts.irr);
+    return p;
+  }
+  var today = new Date(), ref = 'MV-' + today.getFullYear() + String(today.getMonth() + 1).padStart(2, '0') + String(today.getDate()).padStart(2, '0') + '-' + brand.toUpperCase().slice(0, 3) + size;
+  var feats = Object.keys(f).join(', ');
+  var wa = 'https://wa.me/96872160022?text=' + encodeURIComponent([t.waMsg, '', t.platform + ': ' + t.brand[brand], t.area + ': ' + size + ' m² · ' + t.floorsL + ': ' + floors, t.spaces + ': ' + n, t.ref + ': ' + ref, location.href].join('\n'));
+  document.getElementById('tools').innerHTML = '<button class="btn primary" onclick="window.print()">' + t.print + '</button><a class="btn" href="index.html">' + t.back + '</a><a class="btn wa" href="' + wa + '" target="_blank" rel="noopener">' + t.wa + '</a>';
+  var html = '<header class="top"><img src="../assets/img/logo-cyan.png" alt="Mecamac" style="height:34px;filter:brightness(.35)"/><div class="meta">' + t.date + ': ' + today.toLocaleDateString(lang === 'ar' ? 'ar-OM' : 'en-GB') + '<br/>' + t.ref + ': ' + ref + '</div></header>' +
+    '<h1>' + t.title + '</h1><p class="sub">' + t.sub + '</p>' +
+    '<div class="plan"><div><b>' + t.platform + '</b><span>' + t.brand[brand] + '</span></div><div><b>' + t.area + '</b><span>' + num(size) + ' m²</span></div><div><b>' + t.floorsL + '</b><span>' + num(floors) + '</span></div><div><b>' + t.spaces + '</b><span>' + num(n) + '</span></div></div>' +
+    '<table><thead><tr><th style="width:22%">' + t.h_room + '</th><th>' + t.h_pts + '</th><th style="width:36px">' + t.h_done + '</th><th style="width:22%">' + t.h_notes + '</th></tr></thead><tbody>' +
+    rooms.map(function (r, i) { return '<tr><td><strong>' + r + '</strong></td><td>' + ptsFor(r, i).map(function (p) { return '<div><span class="box"></span> ' + p + '</div>'; }).join('') + '</td><td class="c"><span class="box"></span></td><td></td></tr>'; }).join('') +
+    '</tbody></table>' +
+    '<h2>' + t.gen + '</h2><ul class="gen">' + t.genList.map(function (g) { return '<li><span class="box"></span> ' + g + '</li>'; }).join('') + '</ul>' +
+    '<div class="note">' + t.note + '</div>' +
+    '<div class="sig"><div>' + t.sign[0] + '</div><div>' + t.sign[1] + '</div></div>' +
+    '<footer class="foot"><span>' + t.foot + '</span><span>' + ref + '</span></footer>';
+  document.getElementById('sheet').innerHTML = html;
+  document.title = t.title + ' — Mecamac';
+})();
+</script>
+</body>
+</html>
